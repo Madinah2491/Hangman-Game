@@ -13,15 +13,12 @@ document.onkeyup = function(event) {
   //randomly chooses letter//
   var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-  // This logic determines the outcome of the game (win/loss), and increments the appropriate number
-  if (userGuess === computerGuess) 
+  // This logic determines the outcome of the game (win/loss), and increments the appropriate number 
 
   if (userGuess === computerGuess ) {
     wins++;
-  } else if (userGuess > computerGuess) {
-    losses++;
-  } else if ((userGuess === "s") && (computerGuess === "r")) {
-    losses++;
+  } else if (userGuess !== computerGuess) {
+    guesses--;
   } 
 
     // Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/ties.
