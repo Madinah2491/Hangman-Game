@@ -3,22 +3,25 @@ var computerChoices = ["b", "c", "e", "f", "g", "j", "k", "l", "o", "p", "q", "r
 //Create variables to represent score//
 var wins = 0;
 var losses = 0;
-var guesses = 10;
+var guesses = 9;
 
 document.onkeyup = function(event) {
 
-  //determines the ke that is pressed//
+  //determines the key that is pressed//
   var userGuess = event.key;
 
   //randomly chooses letter//
   var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
   // This logic determines the outcome of the game (win/loss), and increments the appropriate number 
+  if (userGuess === computerGuess )
 
   if (userGuess === computerGuess ) {
     wins++;
   } else if (userGuess !== computerGuess) {
     guesses--;
+  } if (userGuess !== computerGuess) {
+    losses++;
   } 
 
     // Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/ties.
